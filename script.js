@@ -31,7 +31,7 @@ let dateLocale = date1.toLocaleString("fr-FR", {
 
 //fonction recuperation API
 const getData = async (coord1, coord2) => {
-  const urlToFetch = `http://api.openweathermap.org/data/2.5/weather?lat=${coord1}&lon=${coord2}&units=metric&appid=${openWeatherKey}`;
+  const urlToFetch = `https://api.openweathermap.org/data/2.5/weather?lat=${coord1}&lon=${coord2}&units=metric&appid=${openWeatherKey}`;
   try {
     const res = await fetch(urlToFetch);
     if (res.ok) {
