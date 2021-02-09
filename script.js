@@ -5,11 +5,12 @@ const section = document.querySelector("section");
 const preload = document.getElementById("preload");
 const footer = document.querySelector("footer");
 const smokesAfterPreload = document.querySelector("smokesAfterPreload");
+
+//Preloader
 const preloadAction = () => {
   preload.style.transform = "opacity";
   preload.style.opacity = "0";
   preload.style.transition = "2s";
-  smokesAfterPreload.style.opacity = "1";
 };
 const preloadFontion = () => {
   window.addEventListener("load", () => {
@@ -38,24 +39,28 @@ const getData = async (coord1, coord2) => {
     if (res.ok) {
       const jsonRes = await res.json();
       console.log(jsonRes);
-      main.innerHTML = `<div class="infoMeteo"><div class=smokesAfterPreload>
+      main.innerHTML = `<div class="infoMeteo">
+      <h2 class=description>${jsonRes.weather[0].description}</h2>
+      <div class=smokesAfterPreload>
       <div class="smoke-1 smokeAfterPreload"></div>
       <div class="smoke-2 smokeAfterPreload"></div>
       <div class="smoke-3 smokeAfterPreload"></div>
       <div class="smoke-4 smokeAfterPreload"></div>
       <div class="smoke-5 smokeAfterPreload"></div>
       <div class="smoke-6 smokeAfterPreload"></div>
+      <div class="smoke-7 smokeAfterPreload"></div>
+      <div class="smoke-8 smokeAfterPreload"></div>
       </div>
       <div class="general">
       <div class="nameDate">
         <h1>${jsonRes.name}</h1>
         <h2>${dateLocale}</h2>
         </div>
-        <h2 class=description>${jsonRes.weather[0].description}</h2>
+        
       </div>
       <div class="infoComp">
       <div class="infoG">
-        <h2 class="temp">${jsonRes.main.temp}<h4>°C</h4></h2>
+        <h3 class="temp">${jsonRes.main.temp}<h4>°C</h4></h3>
       </div>
       <div class="infoD">
         <h2 class="humid">Humidité : ${jsonRes.main.humidity}%</h2>

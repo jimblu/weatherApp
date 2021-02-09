@@ -35,7 +35,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 40vw;
+  max-width: 40vw;
   height: 50vh;
   padding-left: 10px;
   padding-right: 10px;
@@ -46,10 +46,24 @@ main {
   opacity: 0;
   animation: appearside 2s forwards;
   animation-delay: 2s;
-  overflow: hidden;
+  overflow-y: hidden;
   @media only screen and (max-device-width: 768px) {
   }
 }
+.smokesAfterPreload {
+  animation: appearOpacity 1s backwards;
+  animation-delay: 5s;
+}
+@keyframes appearOpacity {
+  0% {
+    transform: opacity;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .infoG {
   display: flex;
   flex-direction: row;
@@ -63,13 +77,16 @@ main {
 }
 h1 {
   font-family: "Yusei Magic", sans-serif;
-  font-size: calc(50px - 2vw);
+  font-size: calc(25px + 1vw);
   color: #fdfffc;
 }
 h2 {
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 15px;
   color: #fdfffc;
+  @media only screen and (max-device-width: 767px) {
+    font-size: 10px;
+  }
 }
 h4 {
   font-family: "Montserrat Alternates", sans-serif;
@@ -77,6 +94,10 @@ h4 {
   color: #fdfffc;
 }
 .description {
+  position: absolute;
+  top: 3%;
+  right: 1%;
+  z-index: 999999;
   opacity: 0;
   animation: appear 2s forwards;
   animation-delay: 5s;
@@ -84,12 +105,14 @@ h4 {
 }
 .infoComp {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   width: 40vw;
 }
 .temp {
-  font-size: calc(130px - 2vw);
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #fdfffc;
+  font-size: calc(1px + 6vw);
   h4 {
     font-family: "Montserrat Alternates", sans-serif;
     font-size: 15px;
@@ -113,29 +136,7 @@ h4 {
     transform: translateX(15px);
   }
 }
-footer {
-  width: 100vw;
-  height: 20vh;
-  opacity: 0;
-  position: relative;
-  @media only screen and (max-device-width: 767px) {
-    display: none;
-  }
-  animation: appearUp 2s forwards;
-  animation-delay: 10s;
-}
-//animationFooter
-@keyframes appearUp {
-  0% {
-    opacity: 0;
-    transform: translateY(70px);
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-//animationInfoGeneral
+
 @keyframes appear {
   0% {
     opacity: 0;
@@ -296,6 +297,28 @@ footer {
   animation: smokeMove 0.8s alternate infinite;
   animation-delay: 2.4s;
 }
+.smoke-7 {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 2%;
+  left: 85%;
+  animation: smokeMove 0.8s alternate infinite;
+  animation-delay: 2s;
+}
+.smoke-8 {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 4%;
+  left: 82%;
+  animation: smokeMove 0.8s alternate infinite;
+  animation-delay: 2s;
+}
 
 //animationNuages
 @keyframes smokeMove {
@@ -305,82 +328,4 @@ footer {
   100% {
     transform: scale(20);
   }
-}
-
-.smoke-7 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 30vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 1.2s;
-}
-.smoke-8 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 33vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 1.4s;
-}
-.smoke-9 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 36vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 1.6s;
-}
-.smoke-10 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 39vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 1.8s;
-}
-.smoke-11 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 42vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 2s;
-}
-.smoke-12 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 45vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 2.2s;
-}
-.smoke-13 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 48vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 2.4s;
 }
