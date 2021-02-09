@@ -4,11 +4,12 @@ const main = document.querySelector("main");
 const section = document.querySelector("section");
 const preload = document.getElementById("preload");
 const footer = document.querySelector("footer");
-
+const smokesAfterPreload = document.querySelector("smokesAfterPreload");
 const preloadAction = () => {
   preload.style.transform = "opacity";
   preload.style.opacity = "0";
   preload.style.transition = "2s";
+  smokesAfterPreload.style.opacity = "1";
 };
 const preloadFontion = () => {
   window.addEventListener("load", () => {
@@ -37,13 +38,14 @@ const getData = async (coord1, coord2) => {
     if (res.ok) {
       const jsonRes = await res.json();
       console.log(jsonRes);
-      main.innerHTML = `<div class="infoMeteo">
+      main.innerHTML = `<div class="infoMeteo"><div class=smokesAfterPreload>
       <div class="smoke-1 smokeAfterPreload"></div>
       <div class="smoke-2 smokeAfterPreload"></div>
       <div class="smoke-3 smokeAfterPreload"></div>
       <div class="smoke-4 smokeAfterPreload"></div>
       <div class="smoke-5 smokeAfterPreload"></div>
       <div class="smoke-6 smokeAfterPreload"></div>
+      </div>
       <div class="general">
       <div class="nameDate">
         <h1>${jsonRes.name}</h1>
@@ -62,7 +64,7 @@ const getData = async (coord1, coord2) => {
         )} km/h</h2>
       </div>
       </div>
-    </>
+    </div>
     `;
       return jsonRes;
     }
