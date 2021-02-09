@@ -46,6 +46,7 @@ main {
   opacity: 0;
   animation: appearside 2s forwards;
   animation-delay: 2s;
+  overflow: hidden;
   @media only screen and (max-device-width: 768px) {
   }
 }
@@ -79,6 +80,7 @@ h4 {
   opacity: 0;
   animation: appear 2s forwards;
   animation-delay: 5s;
+  color: #246eb9;
 }
 .infoComp {
   display: flex;
@@ -219,6 +221,74 @@ footer {
   border-radius: 50%;
   top: 46vh;
   left: 46vw;
+  animation: smokeMove 0.8s alternate infinite;
+  animation-delay: 2.4s;
+}
+
+//animationNuages
+.smoke-1 {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 2%;
+  left: 97%;
+  animation: smokeMove 0.8s alternate infinite;
+  animation-delay: 1.4s;
+}
+.smoke-2 {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 6%;
+  left: 99%;
+  animation: smokeMove 0.8s alternate infinite;
+  animation-delay: 1.6s;
+}
+.smoke-3 {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 1%;
+  left: 96%;
+  animation: smokeMove 0.8s alternate infinite;
+  animation-delay: 1.8s;
+}
+.smoke-4 {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 7%;
+  left: 93%;
+  animation: smokeMove 0.8s alternate infinite;
+  animation-delay: 2s;
+}
+.smoke-5 {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 9%;
+  left: 89%;
+  animation: smokeMove 0.8s alternate infinite;
+  animation-delay: 2.2s;
+}
+.smoke-6 {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 4%;
+  left: 91%;
   animation: smokeMove 0.8s alternate infinite;
   animation-delay: 2.4s;
 }

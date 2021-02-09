@@ -38,6 +38,12 @@ const getData = async (coord1, coord2) => {
       const jsonRes = await res.json();
       console.log(jsonRes);
       main.innerHTML = `<div class="infoMeteo">
+      <div class="smoke-1 smokeAfterPreload"></div>
+      <div class="smoke-2 smokeAfterPreload"></div>
+      <div class="smoke-3 smokeAfterPreload"></div>
+      <div class="smoke-4 smokeAfterPreload"></div>
+      <div class="smoke-5 smokeAfterPreload"></div>
+      <div class="smoke-6 smokeAfterPreload"></div>
       <div class="general">
       <div class="nameDate">
         <h1>${jsonRes.name}</h1>

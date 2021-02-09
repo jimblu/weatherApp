@@ -87,6 +87,7 @@ main {
           animation: appearside 2s forwards;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+  overflow: hidden;
 }
 
 .infoG {
@@ -142,6 +143,7 @@ h4 {
           animation: appear 2s forwards;
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
+  color: #246eb9;
 }
 
 .infoComp {
@@ -376,6 +378,90 @@ footer {
   border-radius: 50%;
   top: 46vh;
   left: 46vw;
+  -webkit-animation: smokeMove 0.8s alternate infinite;
+          animation: smokeMove 0.8s alternate infinite;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+
+.smoke-1 {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 2%;
+  left: 97%;
+  -webkit-animation: smokeMove 0.8s alternate infinite;
+          animation: smokeMove 0.8s alternate infinite;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+.smoke-2 {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 6%;
+  left: 99%;
+  -webkit-animation: smokeMove 0.8s alternate infinite;
+          animation: smokeMove 0.8s alternate infinite;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+.smoke-3 {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 1%;
+  left: 96%;
+  -webkit-animation: smokeMove 0.8s alternate infinite;
+          animation: smokeMove 0.8s alternate infinite;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+.smoke-4 {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 7%;
+  left: 93%;
+  -webkit-animation: smokeMove 0.8s alternate infinite;
+          animation: smokeMove 0.8s alternate infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.smoke-5 {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 9%;
+  left: 89%;
+  -webkit-animation: smokeMove 0.8s alternate infinite;
+          animation: smokeMove 0.8s alternate infinite;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+
+.smoke-6 {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 4%;
+  left: 91%;
   -webkit-animation: smokeMove 0.8s alternate infinite;
           animation: smokeMove 0.8s alternate infinite;
   -webkit-animation-delay: 2.4s;
