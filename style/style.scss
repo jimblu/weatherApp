@@ -7,7 +7,7 @@ body {
   background-color: #246eb9;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -15,37 +15,45 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 90vw;
-  height: 60vh;
+  height: 100vh;
 }
 
 .general {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-self: flex-start;
+  width: 40vw;
   opacity: 0;
   animation: appear 2s forwards;
   animation-delay: 4s;
 }
 .infoMeteo {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   width: 40vw;
-  padding: 10px;
+  height: 50vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   border-radius: 0%;
-  border: solid 50px #fdfffc;
+  border: solid 1px #fdfffc;
   opacity: 0;
   animation: appearside 2s forwards;
-  animation-delay: 5s;
+  animation-delay: 2s;
   @media only screen and (max-device-width: 768px) {
-    width: 100%;
-    border: solid 15px #fdfffc;
   }
 }
 .infoG {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 .infoD {
   display: flex;
@@ -54,19 +62,60 @@ main {
 }
 h1 {
   font-family: "Yusei Magic", sans-serif;
-  font-size: calc(80px - 2vw);
+  font-size: calc(50px - 2vw);
   color: #fdfffc;
 }
 h2 {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   color: #fdfffc;
+}
+h4 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 15px;
+  color: #fdfffc;
+}
+.description {
+  opacity: 0;
+  animation: appear 2s forwards;
+  animation-delay: 5s;
+}
+.infoComp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 40vw;
+}
+.temp {
+  font-size: calc(130px - 2vw);
+  h4 {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 15px;
+    color: #fdfffc;
+  }
+}
+.humid {
+  width: 123px;
+  height: 20px;
+  animation: mouv 3s alternate infinite;
+}
+.wind {
+  animation: mouv 3s alternate infinite;
+  animation-delay: 1s;
+}
+@keyframes mouv {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
 }
 footer {
   width: 100vw;
   height: 20vh;
-  background: #fdfffc;
   opacity: 0;
+  position: relative;
   @media only screen and (max-device-width: 767px) {
     display: none;
   }
@@ -88,7 +137,7 @@ footer {
 @keyframes appear {
   0% {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-50px);
   }
   100% {
     transform: translateY(0);
@@ -99,7 +148,7 @@ footer {
 @keyframes appearside {
   0% {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateX(200px);
   }
   100% {
     transform: translateX(0);
@@ -177,77 +226,13 @@ footer {
 //animationNuages
 @keyframes smokeMove {
   0% {
-    transform: scale(0);
+    transform: scale(10);
   }
   100% {
     transform: scale(20);
   }
 }
-.smoke-1 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 0vw;
-  animation: smokeMove 0.8s alternate infinite;
-}
-.smoke-2 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 5vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 0.2s;
-}
-.smoke-3 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 10vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 0.4s;
-}
-.smoke-4 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 15vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 0.6s;
-}
-.smoke-5 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 20vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 0.8s;
-}
-.smoke-6 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 25vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 0.8s;
-}
+
 .smoke-7 {
   width: calc(-5px + 1vw);
   height: calc(-5px + 1vw);
@@ -266,7 +251,7 @@ footer {
   position: absolute;
   border-radius: 50%;
   top: 0;
-  left: 35vw;
+  left: 33vw;
   animation: smokeMove 0.8s alternate infinite;
   animation-delay: 1.4s;
 }
@@ -277,7 +262,7 @@ footer {
   position: absolute;
   border-radius: 50%;
   top: 0;
-  left: 40vw;
+  left: 36vw;
   animation: smokeMove 0.8s alternate infinite;
   animation-delay: 1.6s;
 }
@@ -288,7 +273,7 @@ footer {
   position: absolute;
   border-radius: 50%;
   top: 0;
-  left: 45vw;
+  left: 39vw;
   animation: smokeMove 0.8s alternate infinite;
   animation-delay: 1.8s;
 }
@@ -299,7 +284,7 @@ footer {
   position: absolute;
   border-radius: 50%;
   top: 0;
-  left: 50vw;
+  left: 42vw;
   animation: smokeMove 0.8s alternate infinite;
   animation-delay: 2s;
 }
@@ -310,7 +295,7 @@ footer {
   position: absolute;
   border-radius: 50%;
   top: 0;
-  left: 55vw;
+  left: 45vw;
   animation: smokeMove 0.8s alternate infinite;
   animation-delay: 2.2s;
 }
@@ -321,84 +306,7 @@ footer {
   position: absolute;
   border-radius: 50%;
   top: 0;
-  left: 60vw;
+  left: 48vw;
   animation: smokeMove 0.8s alternate infinite;
   animation-delay: 2.4s;
-}
-.smoke-14 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 65vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 0.8s;
-}
-.smoke-15 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 70vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 1s;
-}
-.smoke-16 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 75vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 1.2s;
-}
-.smoke-17 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 80vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 1.4s;
-}
-.smoke-18 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 85vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 1.6s;
-}
-.smoke-19 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 90vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 1.8s;
-}
-.smoke-20 {
-  width: calc(-5px + 1vw);
-  height: calc(-5px + 1vw);
-  background-color: white;
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  left: 95vw;
-  animation: smokeMove 0.8s alternate infinite;
-  animation-delay: 2s;
 }

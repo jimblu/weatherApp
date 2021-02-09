@@ -37,17 +37,27 @@ const getData = async (coord1, coord2) => {
     if (res.ok) {
       const jsonRes = await res.json();
       console.log(jsonRes);
-      main.innerHTML = `<div class='general'><h1>${
-        jsonRes.name
-      }</h1><h2>${dateLocale}</h2></div><div class='infoMeteo'><div class='infoG'><h2>${
-        jsonRes.weather[0].description
-      }</h2><h2>${
-        jsonRes.main.temp
-      }°C</h2></div><div class='infoD'><h2>Humidité : ${
-        jsonRes.main.humidity
-      }%</h2><h2>Vent : ${Math.round(
-        jsonRes.wind.speed * 3.495
-      )} km/h</h2></div></div>`;
+      main.innerHTML = `<div class="infoMeteo">
+      <div class="general">
+      <div class="nameDate">
+        <h1>${jsonRes.name}</h1>
+        <h2>${dateLocale}</h2>
+        </div>
+        <h2 class=description>${jsonRes.weather[0].description}</h2>
+      </div>
+      <div class="infoComp">
+      <div class="infoG">
+        <h2 class="temp">${jsonRes.main.temp}<h4>°C</h4></h2>
+      </div>
+      <div class="infoD">
+        <h2 class="humid">Humidité : ${jsonRes.main.humidity}%</h2>
+        <h2 class="wind">Vent : ${Math.round(
+          jsonRes.wind.speed * 3.495
+        )} km/h</h2>
+      </div>
+      </div>
+    </>
+    `;
       return jsonRes;
     }
     throw new Error("Request failed!");
